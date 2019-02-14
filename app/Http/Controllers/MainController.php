@@ -6,11 +6,11 @@ use Log;
 
 class MainController extends Controller
 {
-    const CREATE_SHIPMENT_ENDPOINT = 'http://localhost:8000/api/shipments';
-    const UPDATE_SHIPMENT_ENDPOINT = 'http://localhost:8000/api/shipments/{id}';
-    const CREATE_ADDRESS_ENDPOINT = 'http://localhost:8000/api/addresses';
-    const CREATE_PURCHASE_ENDPOINT = 'http://localhost:8000/api/purchases';
-    const GET_RATES_ENDPOINT = 'http://localhost:8000/api/shipments/{id}/rates';
+    const CREATE_SHIPMENT_ENDPOINT = 'http://sandbox.mienvio.mx/api/shipments';
+    const UPDATE_SHIPMENT_ENDPOINT = 'http://sandbox.mienvio.mx/api/shipments/{id}';
+    const CREATE_ADDRESS_ENDPOINT = 'http://sandbox.mienvio.mx/api/addresses';
+    const CREATE_PURCHASE_ENDPOINT = 'http://sandbox.mienvio.mx/api/purchases';
+    const GET_RATES_ENDPOINT = 'http://sandbox.mienvio.mx/api/shipments/{id}/rates';
 
     protected $apiToken;
 
