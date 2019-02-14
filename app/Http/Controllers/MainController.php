@@ -22,6 +22,12 @@ class MainController extends Controller
         $this->apiToken = env('API_TOKEN');
     }
 
+    /**
+     * Create address from
+     *
+     * @param  Request $request
+     * @return array
+     */
     private function createAddressFrom($request)
     {
         $addressFrom = [
@@ -43,6 +49,12 @@ class MainController extends Controller
         );
     }
 
+    /**
+     * Create address from
+     *
+     * @param  Request $request
+     * @return array
+     */
     private function createAddressTo($request)
     {
         $addressTo = [
@@ -64,6 +76,12 @@ class MainController extends Controller
         );
     }
 
+    /**
+     * Create shipment
+     *
+     * @param  Request $request
+     * @return View
+     */
     public function createShipment(Request $request)
     {
         $addressFromResponse = $this->createAddressFrom($request);
@@ -104,6 +122,12 @@ class MainController extends Controller
         ]);
     }
 
+    /**
+     * Create purchase
+     *
+     * @param  Request $request
+     * @return View
+     */
     public function purchaseShipment(Request $request)
     {
         $shipmentResponse = $this->makeRequest(
@@ -142,7 +166,6 @@ class MainController extends Controller
      */
     private function makeRequest($object, $type, $endpoint, $data = null)
     {
-        \Log::error('$data', ['$data' =>$data]);
         $info = [];
         $errorData = [];
 
