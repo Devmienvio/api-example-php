@@ -1,21 +1,20 @@
-# Lumen PHP Framework
+# Implementación de la API de Mienvio en Lumen (php)
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+En este repo puedes ver un ejemplo muy sencillo de cómo puedes implementar la API de mienvio para poder obtener tarifas y comprar envíos.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+> Es importante aclarar que al ser un ejemplo muy básico carece de manejo de errores y otro tipo de mejoras.
 
-## Official Documentation
+El flujo básico para comprar un envío se compone de:
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+- Crear una dirección de origen
+- Crear una dirección de destino
+- Crear un envío de tipo `QUOTE` para poder consultar tarifas
+- Consultar tarifas
+- Actualizar envío creado para añadir la tarifa seleccionada y marcarlo como listo para comprar
+- Crear una compra
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+> Puedes consultar esta aplicación demo en
+> https://mienviophpclientdemo.herokuapp.com/
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Si tienes dudas o sugerencias sobre cómo mejorar nuestra documentación porfavor escríbenos en dev@mienvio.mx
